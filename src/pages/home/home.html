@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pedidos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card  *ngFor="let pedido of pedidos;let i = index">
+  	<ion-item (click)="detalhaPedido(id)">
+  		<ion-card-content>
+        {{pedido.produto}}
+  		</ion-card-content></ion-item>
+  </ion-card>
+</ion-content>
