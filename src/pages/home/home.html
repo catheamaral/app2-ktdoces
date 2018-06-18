@@ -10,7 +10,12 @@
   <ion-card  *ngFor="let pedido of pedidos;let i = index">
   	<ion-item (click)="detalhaPedido(id)">
   		<ion-card-content>
-        {{pedido.produto}}
+        {{pedido.produto}},
+        {{pedido.quantidade}},
+        {{pedido.rua}},
+        {{pedido.n}},
+        {{pedido.bairro}},
+        {{pedido.comp}}
   		</ion-card-content></ion-item>
   </ion-card>
 </ion-content>

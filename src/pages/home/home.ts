@@ -12,6 +12,7 @@ import 'rxjs/add/operator/toPromise';
 export class HomePage {
 
   pedidos: any
+  //quantidade: any
 
   constructor(public http:HttpClient, public navCtrl: NavController, public toastCtrl: ToastController) {
 
@@ -22,20 +23,21 @@ export class HomePage {
       .toPromise()
       .then((response) => {
         this.pedidos = response;
+        //this.quantidade = response;
       },(err) => console.log(err));
 
   }
 
   detalhaPedido(){
-  	// this.navCtrl.push(StatusPage)
-  	// console.log("Detalhes do pedido aberto");
-	  //  let toast = this.toastCtrl.create({
-    //   message: 'Detalhes do pedido aberto',
-    //   duration: 2000,
-    //   position: 'top'
+  	 this.navCtrl.push(StatusPage)
+  	 console.log("Detalhes do pedido aberto");
+	    let toast = this.toastCtrl.create({
+       message: 'Detalhes do pedido aberto',
+       duration: 2000,
+       position: 'top'
 
-    // });
-    // toast.present();
+     });
+     toast.present();
   }
 
 }
